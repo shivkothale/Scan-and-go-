@@ -1,0 +1,37 @@
+create database test;
+use test;
+create table USER(
+	id int auto_increment primary key,
+    username varchar(50) unique not null,
+    password varchar(50) not null,
+    email varchar(50) not null,
+    mobile varchar(50) not null,
+    wallet int default 1000 
+);
+show tables;
+drop table user;
+select * from USER;
+create table product(
+    p_id int not null unique primary key,
+    p_name varchar(50) not null,
+    p_price varchar(50) not null,
+    p_category varchar(50) not null,
+    p_desc varchar(50) not null
+);
+
+insert into product(p_id,p_name,p_price,p_category,p_desc) values(1001,"Oreo biscuit",10,"Biscuits","50 gm"),
+(1002,"Parle-g",5,"Biscuits","50 gm"),
+(1003,"Knor soup",15,"Soup","20 gm"),
+(1004,"Nestle maggie",12,"Eatable","100 gm"),
+(1005,"Kisan jam",84,"Eatable","250gm"),
+(1006,"Kisan Tomato Sauce",100,"Eatable","250ml"),
+(1007,"Perk",5,"Chocolate","10 gm"),
+(1008,"Kit-Kat",10,"Chocolate","10 gm"),
+(1009,"CocaCola",20,"Soft Drinks","100ml"),
+(1010,"Maaza",50,"Soft Drinks","250ml"),
+(1011,"Sprite",20,"Soft Drinks","100ml")
+;
+
+select * from product;
+
+drop table product
